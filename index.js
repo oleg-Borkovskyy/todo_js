@@ -52,7 +52,6 @@ const check=(el)=>{
       }
 };
 addBtn.addEventListener("click",newElement,false);
-console.log(addBtn);
 list.addEventListener('click', check, false);
 
 for (let i = 0; i < myNodelist.length; i++) {
