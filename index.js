@@ -19,7 +19,7 @@ const checkedItem = (el) => {
 };
 
 const newElement = () => {
-  const inputValue = document.getElementById('myInput').value;
+  const inputValue = document.querySelector('.myInput').value;
   const isInList = listArr.some((el) => {
     return el.text === inputValue;
   });
@@ -37,9 +37,9 @@ const newElement = () => {
     newListItem.item.appendChild(t);
     createCloseBtn(newListItem.item);
     newListItem.item.addEventListener('click', checkedItem, false);
-    document.getElementById('myUl').appendChild(newListItem.item);
+    document.querySelector('.myUl').appendChild(newListItem.item);
   }
-  document.getElementById('myInput').value = '';
+  document.querySelector('.myInput').value = '';
 };
 
 addBtn.addEventListener('click', newElement, false);
