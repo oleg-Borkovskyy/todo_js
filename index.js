@@ -3,6 +3,12 @@ const listArr = [];
 
 const delListItem = (el) => {
   el.target.parentElement.remove();
+  listArr.splice(
+    listArr.indexOf((arrItem) => {
+      return arrItem.item === el;
+    }),
+    1,
+  );
 };
 const createCloseBtn = (listEl) => {
   let span = document.createElement('SPAN');
